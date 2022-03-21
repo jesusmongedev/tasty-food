@@ -1,0 +1,113 @@
+/* Start of css Reset default user agent styles */
+@import url(normalize.css);
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-inline-size: 100%;
+  height: auto;
+}
+/* end of css reset */
+
+main {
+  font-family: 'Roboto', sans-serif;
+  padding: 2em 2em;
+}
+@media screen and (min-width: 1200px) {
+  main {
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+}
+
+.box {
+  background-color: peachpuff;
+}
+
+/* Css variables */
+/* typography */
+:root {
+  --tittle-font: 5.2rem;
+  --tittle-height: 7rem;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --tittle-font: 6rem;
+    --tittle-height: 8rem;
+  }
+}
+
+/* Assets images */
+/* dish1
+https://i.postimg.cc/qR0pRyfB/dish1.png
+dish2
+https://i.postimg.cc/Wp5sNd5j/dish2.png
+dish3
+https://i.postimg.cc/hPwgmHF5/dish3.png
+dish4
+https://i.postimg.cc/MG08hHnC/dish4.png
+hero
+https://i.postimg.cc/zD21m9fG/hero.png
+plate1
+https://i.postimg.cc/15g1yJgc/plate1.png
+plate2
+https://i.postimg.cc/cH1P2my3/plate2.png
+plate3
+https://i.postimg.cc/rs3bd2dG/plate3.png
+plate4
+https://i.postimg.cc/Fsk8MzqT/plate4.png
+plate5
+https://i.postimg.cc/rw63Mc2M/plate5.png
+video
+https://i.postimg.cc/k5qHRc5H/video.png */
+
+/* Hero section */
+.hero-container {
+  display: grid;
+  /* grid-template-columns: 2fr 3fr; */
+  row-gap: 4em;
+  align-items: center;
+}
+.hero-description__tittle {
+  margin: 0;
+  font-size: var(--tittle-font);
+  line-height: var(--tittle-height);
+}
+.hero-description__text {
+  font-size: 1.6rem;
+  line-height: 2.25rem;
+  letter-spacing: 0.1rem;
+}
+
+.primary-button {
+  padding: 1em 1.5em;
+  border-radius: 2.5rem;
+  border: none;
+  background-color: #ff4400;
+  color: #fff;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.hero-plate-container__img {
+  justify-self: center;
+  /* height: 60%; */
+  object-fit: contain;
+}
+@media screen and (min-width: 768px) {
+  .hero-container {
+    grid-template-columns: 2fr 3fr;
+    grid-auto-rows: 100vh;
+  }
+  .hero-plate-container__img {
+    height: 60%;
+  }
+}
