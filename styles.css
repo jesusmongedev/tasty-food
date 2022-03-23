@@ -17,12 +17,13 @@ figure {
 img {
   max-inline-size: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 /* end of css reset */
 
 main {
   font-family: 'Roboto', sans-serif;
+  color: #3c4043;
   padding: 3em;
 }
 @media screen and (min-width: 1200px) {
@@ -86,9 +87,9 @@ https://i.postimg.cc/k5qHRc5H/video.png */
 /* Hero section */
 .hero-container {
   display: grid;
-  /* grid-template-columns: 2fr 3fr; */
   row-gap: 2em;
   align-items: center;
+  padding-bottom: 6em;
 }
 .hero-description__tittle {
   margin: 0;
@@ -123,8 +124,12 @@ https://i.postimg.cc/k5qHRc5H/video.png */
 }
 
 /* Our services section */
+.services-container {
+  border-top: 0.15em solid #8f8f8f;
+  padding-bottom: 6em;
+}
 .services__tittle {
-  margin-top: 5.2rem;
+  margin: 7rem 0 4rem;
   text-align: center;
   font-size: var(--heading2-font);
 }
@@ -137,7 +142,12 @@ https://i.postimg.cc/k5qHRc5H/video.png */
   grid-column: 1 / 3;
 }
 
+/*TODO Make a food card with rate tittle price and order button */
 /* Home Menu section */
+.home-menu-container {
+  border-top: 1px solid #8f8f8f;
+  padding-bottom: 3em;
+}
 .menu-grid-container {
   display: grid;
   justify-content: center;
@@ -145,7 +155,7 @@ https://i.postimg.cc/k5qHRc5H/video.png */
   gap: 2em;
 }
 .plate {
-  background-color: rgb(255, 68, 0, 0.2);
+  background-color: rgb(0, 0, 0, 0.1);
   border-radius: 4em 0 4em 0em;
 }
 .plate:nth-child(even) {
@@ -158,21 +168,35 @@ https://i.postimg.cc/k5qHRc5H/video.png */
   .hero-container {
     grid-template-columns: 2fr 3fr;
     grid-auto-rows: 100vh;
+    padding: 0;
   }
   .hero-plate-container__img {
-    height: 60%;
+    height: 50%;
   }
 
   /* Our Sevices Section  */
+  .services-container {
+    padding-bottom: 12em;
+  }
   .services-grid-container {
-    grid-template-columns: repeat(4, minmax(75px, 1fr));
+    grid-template-columns: repeat(4, minmax(75px, 250px));
+    grid-auto-rows: 1fr;
   }
   .services__video {
     grid-area: 1 / 1 / 3 / 3;
   }
 
   /* Home Menu Section */
+  .home-menu-container {
+    padding-bottom: 6em;
+  }
   .menu-grid-container {
     grid-template-columns: repeat(auto-fit, 224px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-plate-container__img {
+    height: 70%;
   }
 }
