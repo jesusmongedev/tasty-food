@@ -109,7 +109,12 @@ https://i.postimg.cc/k5qHRc5H/video.png */
   padding: 0.5em 1.5em;
   border-radius: 2.5rem;
   border: none;
-  background-color: var(--primary-color);
+  background: linear-gradient(
+    -15deg,
+    var(--primary-color),
+    var(--primary-color),
+    white
+  );
   color: #fff;
   font-size: 2rem;
   cursor: pointer;
@@ -143,6 +148,8 @@ https://i.postimg.cc/k5qHRc5H/video.png */
 }
 
 /*TODO Make a food card with rate tittle price and order button */
+/*TODO Split css styles in head tag: mobile: styles.css, tablet, desktop*/
+
 /* Home Menu section */
 .home-menu-container {
   border-top: 1px solid #8f8f8f;
@@ -154,12 +161,23 @@ https://i.postimg.cc/k5qHRc5H/video.png */
   grid-template-columns: repeat(auto-fit, 260px);
   gap: 2em;
 }
-.plate {
+.menu-item-bg {
+  position: relative;
+  padding: 1.5em;
   background-color: rgb(0, 0, 0, 0.1);
-  border-radius: 4em 0 4em 0em;
+  border-radius: 5em 0 5em 0em;
 }
-.plate:nth-child(even) {
-  border-radius: 0em 4em 0em 4em;
+.bxs-heart {
+  position: absolute;
+  right: 1em;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.bxs-heart--fav {
+  color: red;
+}
+.plate {
+  object-fit: contain;
 }
 
 /* Large screens Media Queries  */
