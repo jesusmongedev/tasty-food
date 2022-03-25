@@ -169,8 +169,9 @@ https://i.postimg.cc/k5qHRc5H/video.png */
 }
 .bxs-heart {
   position: absolute;
-  right: 1em;
-  font-size: 2rem;
+  right: 0.5em;
+  font-size: 3rem;
+  color: rgb(0, 0, 0, 0.3);
   cursor: pointer;
 }
 .bxs-heart--fav {
